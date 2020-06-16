@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Connections</title>
+		<link rel="stylesheet" type="text/css" href="/CSSFiles/styleIndex.css">
+	</head>
+	<body>
+		<% include ./partials/header.ejs %>
+		<main>
+				<h1 class="headingConnections">Connections and activities avialable in UNCC Swim Club</h1>
+				<%
+				for(var i=0; i< data.connections.length; i++){ %>
+					<div class="headingConnections2">
+					  <h3 class="dynamicConnections"><%= data.connections[i] %></h3>
+					  <%
+					  for(var m=0; m< data.items.length;m++){
+						  if(data.connections[i] === data.items[m].connectionTopic){ %>													
+							  <p><a href="/connections/connection/<%= data.items[m].connectionId %>"><%= data.items[m].connectionName %></a></p>
+						 <% }
+					  }
+					   %>
+			  </div>
+					   <br>
+			  <% }%>
+		</main>
+		<% include ./partials/footer.ejs %>
+		 
+	</body>
+</html>

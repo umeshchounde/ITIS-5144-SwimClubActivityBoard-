@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<title>Home</title>
+		<link rel="stylesheet" type="text/css" href="/CSSFiles/styleIndex.css">
+	</head>
+	<body>
+		<% include ./partials/header.ejs %>
+		<main>
+                <h1>Welcome to UNCC Swimming Club</h1>
+                <h4>Please Enter your User Name and pasword to sign in</h4>
+                <% if (message) {%>
+                <div class="usr_msg usr_err"><%= message %></div>
+                <% } %>
+                <form method="post" action="/savedConnections/check">
+                    <label for="email">Email</label>
+                    <input type="text" label="email" name="username">
+                    <label for="password">Password</label>
+                    <input type="password" label="password" name="password">
+                    <button type="submit">Signin</button>
+                </form>
+		</main>
+		<% include ./partials/footer.ejs %>
+	</body>
+</html>

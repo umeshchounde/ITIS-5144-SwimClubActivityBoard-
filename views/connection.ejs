@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Connection</title>
+		<link rel="stylesheet" type="text/css" href="/CSSFiles/styleIndex.css">
+	</head>
+	<body>
+	
+		<% include ./partials/header.ejs %>
+		<main>
+		<h1 class="heading">Connection Information</h1>
+		<h2 class="heading" ><%= data.item[0].connectionTopic%></h2>
+		<div class="connection">
+			<p><%= data.item[0].connectionName%></p>
+			<p><%= data.item[0].connectionDateAndTime%></p>
+			<p>Belk Pool, UNCC</p>
+		</div>
+		<div class ="imgClass">
+				<img class = "imgsrc" src="/ImageFiles/ClubActivities1.jpg" alt="SwimmingClub">
+		</div>
+		<div class="clear"></div>
+		<div class="details">
+			<h3>Details</h3>
+			<p><%= data.item[0].connectionDetails%></p>
+			
+		</div>
+		<div>
+			<h4 class="heading"> 5 people are attending <%= data.item[0].connectionName%> Session, Are you interested in <%= data.item[0].connectionName%>? </h4>
+			<div >
+				
+		<form type="hidden" action="/savedconnections/<%= data.item[0].connectionId %>" method="post">
+			<input type="hidden" name="feedbackHidden" value="yesno">
+			<input type="hidden" name="connectionId" value="<%= data.item[0].connectionId%>">
+			<div class="buttonOptions">
+				<br>
+				<button type="submit" class="option3" name="rsvp" value="yes">Yes </button>
+				<button type="submit" class="option4" name="rsvp" value="no">No </button>
+				<button type="submit" class="option5" name="rsvp" value="maybe">Maybe </button>
+			</div>
+		</form>
+			</div>
+		</div>
+		
+		</main>
+		<% include ./partials/footer.ejs %>
+		
+	</body>
+</html>

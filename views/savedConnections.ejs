@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<title>Saved Connections</title>
+		<link rel="stylesheet" type="text/css" href="/CSSFiles/styleIndex.css">
+	</head>
+	<body>
+		<% include ./partials/header.ejs %>
+		<main> 
+				<div class="main-area">
+				  <div class="main-header">
+					<h2 class="heading">Norm's Saved Connections</h2>
+				  </div>
+				<table>
+				  <tr class="tab-header">
+					<th>Connections</th>
+					<th>Category</th>
+					<th>Interested</th>
+					<th colspan="2"> Update / Delete</th>
+				  </tr>
+				  <%if(data.userProfile!=null){%>
+					<%for(var i=0;i<data.userProfile._userConnections.length;i++){%>
+						<tr class="tab-header">
+							<td ><a href="/connections/connection/<%=data.userProfile._userConnections[i].connectionId%>"><%=data.userProfile._userConnections[i].connectionName%></a></td>
+							<td><%=data.userProfile._userConnections[i].connectionTopic%></td>
+							<td><%=data.userProfile._userConnections[i].rsvp%></td>
+						
+							<td>
+							<a class="Change option1" href="/connections/connection/<%=data.userProfile._userConnections[i].connectionId%>">Update</a>
+						</td>
+							<td><a class="Delete option2" href="/delete/<%=data.userProfile._userConnections[i].connectionId%>">Delete</a>
+							</td>
+						</tr>
+				   	<%}}%>
+				</table>
+				</div>
+			  </main>
+				<% include ./partials/footer.ejs %>
+	</body>
+	</html>

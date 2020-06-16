@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<title>New Connection</title>
+		<link rel="stylesheet" type="text/css" href="/CSSFiles/styleIndex.css">
+	</head>
+	<body>
+		<% include ./partials/header.ejs %>
+		<main> 
+            <div class="container">
+                <h1 class="l-heading"><span class="text-primary">New Connection</span></h1>
+                <h3>Please fill out following deetails about new connection</h3>
+                <form type="hidden" action="/newConnection" method="post">
+                    <div class="form-gorup">
+                        <label for="topic">Topic</label>
+                        <input type="text" name="topic" id="topic">
+                    </div>
+                    <div class="form-gorup">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="form-gorup">
+                        <label for="details">Details</label>
+                        <input type="details" name="details" id="details">
+                    </div>
+                    <!-- <div class="form-gorup">
+                        <label for="where">Where</label>
+                        <textarea name="where" id="where"></textarea>
+                    </div> -->
+                    <div class="form-gorup">
+                            <label for="when">When</label>
+                            <textarea name="when" id="when"></textarea>
+                    </div>
+                    <button  type="submit" class="btn">Create Connection</button>
+                </form>
+            </div>
+		</main>
+		<% include ./partials/footer.ejs %>
+	</body>

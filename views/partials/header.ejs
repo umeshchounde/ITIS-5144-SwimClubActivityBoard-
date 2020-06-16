@@ -1,0 +1,16 @@
+<header>
+    <nav id="navbar">
+        <div class="container">
+            <h2 class="logo"><a href="/">UNCCSwimClub</a></h2>
+            <ul>
+                <%if(isloggedin){%><li><a href="/newConnection">Start a new connection</a></li><%}else{%><li><a href="/login">Login</a></li><%}%>
+                <%if(isloggedin){%><li><a href="/savedconnections">My Connections</a></li><%}else{%><li><a href="/login">Login</a></li><%}%>
+            <%if(isloggedin){%><li><a href="/logout">Sign Out</a></li><%}else{%><li><a href="/login">Sign Up</a></li><%}%>
+            </ul>
+         </div>
+    </nav>
+    <nav id=navConnections>
+        <a href="/connections">Connections</a>
+    </nav>
+    <%if(isloggedin){%><span>Welcome Niner!</span><%}%>
+</header>
