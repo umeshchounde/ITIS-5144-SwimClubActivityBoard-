@@ -1,19 +1,20 @@
 Tech stack used:
 
-  Node.js, Express for backend
-  EJS, html, css for frontend
-  Mongodb, Mongoose for DB.
+  1.Node.js, Express for backend
+  
+  2.EJS, html, css for frontend
+  
+  3.Mongodb, Mongoose for DB.
 
 To setup:
 
-npm install
-
+  1.npm install
 
 To setup db:
 
-Install mongodb
+  1.Install mongodb
 
-Use scripts in FinalProject_createDB.txt
+  2.Use scripts in FinalProject_createDB.txt
 
 To run:
 
