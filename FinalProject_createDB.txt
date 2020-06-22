@@ -1,0 +1,23 @@
+use new
+db.createCollection("ConnectionData");
+	
+    db.ConnectionData.insert({connectionId: 1,connectionName: "Log Rolling",connectionTopic: "Water Sports",connectionDetails: "Looking for a new lifestyle sport that combines dexterity, cardio, and core strength with a totally authentic machismo factor? If so, time to put on your swimsuit and Drop by Belk Pool.",connectionDateAndTime: "June 13 2020"});
+	
+    db.ConnectionData.insert({connectionId: 2,connectionName: "Water Pollo",connectionTopic: "Water Sports",connectionDetails: "Looking for a new lifestyle sport that combines dexterity, cardio, and core strength with a totally authentic machismo factor? If so, time to put on your swimsuit and Drop by Belk Pool.",connectionDateAndTime: "June 14 2020"});
+	
+    db.ConnectionData.insert({connectionId: 3,connectionName: "Water Volleyball",connectionTopic: "Water Sports",connectionDetails: "Looking for a new lifestyle sport that combines dexterity, cardio, and core strength with a totally authentic machismo factor? If so, time to put on your swimsuit and Drop by Belk Pool.",connectionDateAndTime: "June 15 2020"});
+	
+    db.ConnectionData.insert({connectionId: 4,connectionName: "Relay Swimming",connectionTopic: "Competitions and Practice",connectionDetails: "Looking for a new lifestyle sport that combines dexterity, cardio, and core strength with a totally authentic machismo factor? If so, time to put on your swimsuit and Drop by Belk Pool.",connectionDateAndTime: "June 16 2020"});
+	
+    db.ConnectionData.insert({connectionId: 5,connectionName: "Swimming Contest",connectionTopic: "Competitions and Practice",connectionDetails: "Looking for a new lifestyle sport that combines dexterity, cardio, and core strength with a totally authentic machismo factor? If so, time to put on your swimsuit and Drop by Belk Pool.",connectionDateAndTime: "June 17 2020"});
+	
+    db.ConnectionData.insert({connectionId: 6,connectionName: "Group Practice",connectionTopic: "Competitions and Practice",connectionDetails: "Looking for a new lifestyle sport that combines dexterity, cardio, and core strength with a totally authentic machismo factor? If so, time to put on your swimsuit and Drop by Belk Pool.",connectionDateAndTime: "June 18 2020"});
+
+  
+  
+  db.createCollection("UserData");  
+
+db.UserData.insert({userId: 1,firstName: "ABC",lastName: "DEF",email: "uchounde1@uncc.edu",addr1: "Long way from home",addr2: "Apt",city: "City",state: "State",zipCode: 222222,country: "US",password:"0123456",user_connection:[{connectionId: 2,connectionName: "Water Pollo",connectionTopic: "Water Sports",rsvp:"yes"}]})
+  
+  db.UserData.insert({userId: 2,firstName: "MNO",lastName: "STU",email: "uchounde@uncc.edu",addr1: "Long way from home",addr2: "Apt",city: "City",state: "State",zipCode: 222222,country: "US", password:"0123456",user_connection:[{
+        connectionId: 1,connectionName: "Log Rolling",connectionTopic: "Water Sports",rsvp:"yes"}]})
