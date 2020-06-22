@@ -9,10 +9,13 @@ Mongodb, Mongoose for DB.
 To setup:
 
 npm install
+
+
 To setup db:
 
 Install mongodb
-Use scripts in create_db_Final.txt
+Use scripts in FinalProject_createDB.txt
+
 To run:
 
 node app
