@@ -14,6 +14,7 @@ npm install
 To setup db:
 
 Install mongodb
+
 Use scripts in FinalProject_createDB.txt
 
 To run:
