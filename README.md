@@ -1,8 +1,11 @@
 Tech stack used:
 
 Node.js, Express for backend
+
 EJS, html, css for frontend
+
 Mongodb, Mongoose for DB.
+
 To setup:
 
 npm install
